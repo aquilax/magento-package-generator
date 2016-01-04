@@ -1,0 +1,23 @@
+{
+    "name": "aquilax/magento-package-generator",
+    "description": "Library for generating Magento modules",
+    "type": "library",
+    "authors": [
+        {
+            "name": "aquilax",
+            "email": "aquilax@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Aquilax\\Magento\\": "src"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpmd/phpmd" : "@stable",
+        "phpunit/phpunit": "4.6.*",
+        "squizlabs/php_codesniffer": "2.*"
+    }
+}
