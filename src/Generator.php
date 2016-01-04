@@ -18,7 +18,7 @@ class Generator
         $xml->addChild('description', $config->getDescription());
         $xml->addChild('notes', $config->getNotes());
         $authors = $xml->addChild('authors');
-        foreach($config->getAuthors() as $author) {
+        foreach ($config->getAuthors() as $author) {
             $author = $authors->addChild('author');
             $author->addChild('name', $author['name']);
             $author->addChild('user', $author['user']);

@@ -35,35 +35,43 @@ class PackageConfig
     protected $compatible = '';
     protected $content = array();
 
-    public function setName($name) {
+    public function setName($name)
+    {
         $this->name = $name;
     }
 
-    public function getName() {
+    public function getName()
+    {
         return $this->name;
     }
 
-    public function setVersion($version) {
+    public function setVersion($version)
+    {
         $this->version = $version;
     }
 
-    public function getVersion() {
+    public function getVersion()
+    {
         return $this->version;
     }
 
-    public function setStability($stability) {
+    public function setStability($stability)
+    {
         $this->stability = $stability;
     }
 
-    public function getStability() {
+    public function getStability()
+    {
         return $this->stability;
     }
 
-    public function setLicense($license) {
+    public function setLicense($license)
+    {
         $this->license = $license;
     }
 
-    public function getLicense() {
+    public function getLicense()
+    {
         return $this->license;
     }
 
@@ -151,7 +159,8 @@ class PackageConfig
         return $this->compatible;
     }
 
-    public function addContent($target, $path, $type) {
+    public function addContent($target, $path, $type)
+    {
         $this->content[] = array(
             'target' => $target,
             'path' => $path,

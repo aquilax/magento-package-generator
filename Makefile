@@ -1,6 +1,8 @@
-SRC_DIR = ./src
-TESTS_DIR = ./tests
-COVERAGE_DIR = ./coverage
+BASE = $(realpath ./)
+SRC_DIR = $(BASE)/src
+TESTS_DIR = $(BASE)/tests
+COVERAGE_DIR = $(BASE)/coverage
+BIN_DIR = $(BASE)/vendor/bin
 
 test:
 	$(BIN_DIR)/phpunit
