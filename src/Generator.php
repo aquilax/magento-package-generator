@@ -18,11 +18,11 @@ class Generator
         $xml->addChild('description', $config->getDescription());
         $xml->addChild('notes', $config->getNotes());
         $authors = $xml->addChild('authors');
-        foreach ($config->getAuthors() as $author) {
+        foreach ($config->getAuthors() as $singleAuthor) {
             $author = $authors->addChild('author');
-            $author->addChild('name', $author['name']);
-            $author->addChild('user', $author['user']);
-            $author->addChild('email', $author['email']);
+            $author->addChild('name', $singleAuthor['name']);
+            $author->addChild('user', $singleAuthor['user']);
+            $author->addChild('email', $singleAuthor['email']);
         }
         $xml->addChild('date', date('Y-m-d', $config->getTime()));
         $xml->addChild('date', date('H:i:s', $config->getTime()));
