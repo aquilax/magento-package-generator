@@ -34,6 +34,8 @@ class PackageConfig
     protected $time = 0;
     protected $compatible = '';
     protected $content = array();
+    protected $phpMin = '5.0.0';
+    protected $phpMax = '5.7.0';
 
     public function setName($name)
     {
@@ -171,5 +173,21 @@ class PackageConfig
     public function getContent()
     {
         return $this->content;
+    }
+
+    public function setPHPDependency($minVersion, $maxVersion)
+    {
+        $this->phpMin = $minVersion;
+        $this->phpMax = $maxVersion;
+    }
+
+    public function getPHPMinVersion()
+    {
+        return $this->phpMin;
+    }
+
+    public function getPHPMaxVersion()
+    {
+        return $this->phpMax;
     }
 }

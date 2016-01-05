@@ -33,9 +33,8 @@ class Generator
         $dependencies = $xml->addChild('dependencies');
         $required = $dependencies->addChild('required');
         $php = $required->addChild('php');
-        $php->addChild('min', '5.0.0');
-        $php->addChild('max', '5.7.0');
-
+        $php->addChild('min', $config->getPHPMinVersion());
+        $php->addChild('max', $config->getPHPMaxVersion());
         return $xml->asXML();
     }
 
@@ -58,7 +57,6 @@ class Generator
         $file->addAttribute('name', basename($path));
         $file->addAttribute('hash', md5_file($path));
     }
-
 
     protected function addDirectory($target, $path)
     {

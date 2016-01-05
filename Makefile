@@ -9,6 +9,7 @@ test:
 
 php-lint:
 	find $(SRC_DIR) -name "*.php" -print0 | xargs -0 -n1 -P8 php -l
+	find $(TESTS_DIR) -name "*.php" -print0 | xargs -0 -n1 -P8 php -l
 
 phpmd:
 	./vendor/bin/phpmd $(SRC_DIR) text cleancode,codesize,controversial,design,naming,unusedcode
@@ -25,4 +26,3 @@ sniff:
 sniff-fix:
 	$(BIN_DIR)/phpcbf --standard=PSR2 --extensions=php $(SRC_DIR)
 	$(BIN_DIR)/phpcbf --standard=PSR2 --extensions=php $(TESTS_DIR)
-	$(BIN_DIR)/phpcbf --standard=PSR2 --extensions=php $(TRANSLATIONS_DIR)
