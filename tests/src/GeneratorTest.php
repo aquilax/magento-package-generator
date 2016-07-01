@@ -24,6 +24,6 @@ class GeneratorTest extends PHPUnit_Framework_TestCase
     {
         $generator = new Generator();
         $xml = $generator->getPackageXML($packageConfig);
-        $this->assertEquals($expected, $xml);
+        $this->assertXmlStringEqualsXmlString($expected, $xml);
     }
 }
